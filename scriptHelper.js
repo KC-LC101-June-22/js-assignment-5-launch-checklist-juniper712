@@ -1,6 +1,23 @@
 
 require('isomorphic-fetch');
 
+async function myFetch() {
+    let planetsReturned;
+
+    planetsReturned = await fetch ("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
+        }
+            return reponse.json();
+        
+            }
+        });
+return planetsReturned;   
+}
+
+function pickPlanet(planets) {
+    let index = Math.floor(Math.random()*planets.length);
+    return planets[index];
+}
+
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    let div = document.getElementbyId("missiontTarget");
    div.innerHTML = 
@@ -74,22 +91,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
                 }
             }
             
-async function myFetch() {
-    let planetsReturned;
 
-    planetsReturned = await fetch ("https://handlers.education.launchcode.org/static/planets.json").then(function(response) {
-        }
-            return reponse.json();
-        
-            }
-        });
-return planetsReturned;   
-}
-
-function pickPlanet(planets) {
-    let index = Math.floor(Math.random()*planets.length);
-    return planets[index];
-}
 
 module.exports.addDestinationInfo = addDestinationInfo;
 module.exports.validateInput = validateInput;
