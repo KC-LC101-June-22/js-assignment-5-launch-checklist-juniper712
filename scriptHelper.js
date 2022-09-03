@@ -53,8 +53,8 @@ function validateInput(testInput) {
 }  
     
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-    let pilot = document.getElementbyId("pilotStatus");
-    let colpilot = document.getElementbyId("copilotStatus");
+    let pilotStatus = document.getElementbyId("pilotStatus");
+    let colpilotStatus = document.getElementbyId("copilotStatus");
     let fuelLevel = document.getElementbyId("fuelStatus");
     let cargoMass = document.getElementbyId("cargoStatus");
 
