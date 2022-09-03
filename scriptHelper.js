@@ -30,7 +30,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                     <li>Distance from Earth: $(distance)</li>
                     <li>Number of Moons: $(moons)</li>
                 </ol>
-                <img src="$(https://unsplash.com/photos/N3BQHYOVq5E)">;`
+                <img src="${imageUrl}">`;
 }
 
 function validateInput(testInput) {
