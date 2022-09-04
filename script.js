@@ -11,7 +11,7 @@ window.addEventListener("load", function() {
        console.log(listedPlanets);
    }).then(function () {
        console.log(listedPlanets);
-       let chosenPlanet = choosePlanet(listedPlanets);
+       let chosenPlanet = pickPlanet(listedPlanets);
        addDestinationInfo(document, chosenPlanet.name, chosenPlanet.diamater, chosenPlanet.star, chosenPlanet.distance, chosenPlanet.moon, chosenPlanet.moons, chosenPlanet.image);
    })
   
