@@ -44,7 +44,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let cargo = document.getElementbyId("cargoStatus");
 
     if (validateInput(pilot) === "Empty" || validateInput(colpilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
-        alert ("Missing value(s)!");
+        alert ("Missing value!");
     } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
         alert ("Please enter a valid value for each field!");
     } else {
