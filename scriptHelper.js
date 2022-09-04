@@ -86,7 +86,7 @@ async function myFetch() {
             }
             else {
             return response.json();
-            return reponse.json();
+           
         
             }
     }); 
