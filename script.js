@@ -14,6 +14,10 @@ window.addEventListener("load", function() {
        let chosenPlanet = pickPlanet(listedPlanets);
        addDestinationInfo(document, chosenPlanet.name, chosenPlanet.diamater, chosenPlanet.star, chosenPlanet.distance, chosenPlanet.moon, chosenPlanet.moons, chosenPlanet.image);
    })
+   
+   let list = document.getElementById("faultyItems");
+   list.style.visibility = "hidden";
+   let for = document.querySelector("form");
   
     form.addEventListener("submit", function(event) {
     event.preventDefault();
