@@ -40,12 +40,12 @@ function validateInput(testInput) {
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let pilotStatus = document.getElementbyId("pilotStatus");
     let colpilotStatus = document.getElementbyId("copilotStatus");
-    let fuelLevel = document.getElementbyId("fuelStatus");
-    let cargoMass = document.getElementbyId("cargoStatus");
+    let fuel = document.getElementbyId("fuelStatus");
+    let cargo = document.getElementbyId("cargoStatus");
 
-    if (validateInput(pilot) === "Empty" || validateInput(colpilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoMass) === "Empty") {
+    if (validateInput(pilot) === "Empty" || validateInput(colpilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
         alert ("Missing value(s)!");
-    } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoMass) === "Not a Number") {
+    } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
         alert ("Please enter a valid value for each field!");
     } else {
         list.style.visibility = "visible";
@@ -53,17 +53,17 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         colpilotStatus.innerHTML = `Copilot ${copilot} is ready`;
         
         let launchStatus = document.getElementbyId("launchStatus");
-            if (fuelLevel < 10000 && cargoMass <= 10000) {
+            if (fuelLevel < 10000 && cargoLevel <= 10000) {
                 fuel.innerHTML = "Fuel level is too low for liftoff";
                 cargo.innerHTML = "Cargo mass is too low for liftoff";
                 launchStatus.innerHTML = "Shuttle not ready for launch";
                 launchStatus.style.color = "red";
-            } else if (fuelLevel >= 10000 && cargoMass >= 10000) {
+            } else if (fuelLevel >= 10000 && cargoLevel >= 10000) {
                 fuel.innerHTML = "Fuel level is good";
                 cargo.innerHTML = "Cargo is too heavy for liftoff";
                 launchStatus.innerHTML = "Shuttle is not ready for launch";
                 launchStatus.style.color = "red";
-            } else if (fuelLevel < 10000 && cargoMass > 10000)  {
+            } else if (fuelLevel < 10000 && cargoLevel > 10000)  {
                 fuel.innerHTML = "Fuel level is too low for liftoff";
                 cargo.innerHTML = "Cargo is too heavy for liftoff";
                 launchStatus.innerHTML = "Shuttle is not ready for launch";
