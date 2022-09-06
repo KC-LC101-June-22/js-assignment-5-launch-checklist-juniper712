@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
         let copilotInput = document.querySelector("input[name=copilotName]");
         let copilot = copilotInput.value;
        
-        let fuelInput = document.querySelector("input=[name=fuelLevel] ");
+        let fuelInput = document.querySelector("input[name=fuelLevel] ");
         let fuelLevel = Number(fuelLevel.value);
        
         let cargoInput = document.querySelector("input=[name=cargoMass]");
