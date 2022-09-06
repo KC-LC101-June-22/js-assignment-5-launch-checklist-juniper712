@@ -39,18 +39,18 @@ function validateInput(testInput) {
     
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     let pilotStatus = document.getElementbyId("pilotStatus");
-    let colpilotStatus = document.getElementbyId("copilotStatus");
+    let copilotStatus = document.getElementbyId("copilotStatus");
     let fuel = document.getElementbyId("fuelStatus");
     let cargo = document.getElementbyId("cargoStatus");
 
-    if (validateInput(pilot) === "Empty" || validateInput(colpilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
+    if (validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" || validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
         alert ("Missing value!");
     } else if (validateInput(pilot) === "Is a Number" || validateInput(copilot) === "Is a Number" || validateInput(fuelLevel) === "Not a Number" || validateInput(cargoLevel) === "Not a Number") {
         alert ("Please enter a valid value for each field!");
     } else {
         list.style.visibility = "visible";
         pilotStatus.innerHTML = `Pilot ${pilot} is ready`;
-        colpilotStatus.innerHTML = `Copilot ${copilot} is ready`;
+        copilotStatus.innerHTML = `Copilot ${copilot} is ready`;
         
         let launchStatus = document.getElementbyId("launchStatus");
             if (fuelLevel < 10000 && cargoLevel <= 10000) {
