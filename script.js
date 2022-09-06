@@ -12,7 +12,7 @@ window.addEventListener("load", function() {
    }).then(function () {
        console.log(listedPlanets);
        let selectedPlanet = pickPlanet(listedPlanets);
-       addDestinationInfo(document, selectedPlanet.name, selectedPlanet.diamater, selectedPlanet.star, selectedPlanet.distance, selectedPlanet.moon, selectedPlanet.moons, selectedPlanet.image);
+       addDestinationInfo(document, selectedPlanet.name, selectedPlanet.diamater, selectedPlanet.star, selectedPlanet.distance, selectedPlanet.moons, selectedPlanet.image);
    })
    
    let list = document.getElementById("faultyItems");
