@@ -11,8 +11,8 @@ window.addEventListener("load", function() {
        console.log(listedPlanets);
    }).then(function () {
        console.log(listedPlanets);
-       let chosenPlanet = pickPlanet(listedPlanets);
-       addDestinationInfo(document, chosenPlanet.name, chosenPlanet.diamater, chosenPlanet.star, chosenPlanet.distance, chosenPlanet.moon, chosenPlanet.moons, chosenPlanet.image);
+       let selectedPlanet = pickPlanet(listedPlanets);
+       addDestinationInfo(document, selectedPlanet.name, selectedPlanet.diamater, selectedPlanet.star, selectedPlanet.distance, selectedPlanet.moon, selectedPlanet.moons, selectedPlanet.image);
    })
    
    let list = document.getElementById("faultyItems");
