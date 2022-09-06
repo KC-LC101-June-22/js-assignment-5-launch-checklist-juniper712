@@ -30,7 +30,7 @@ window.addEventListener("load", function() {
         let cargoLevel = Number(cargoInput.value);
        
 
-        formsSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
+        formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
 
   
     });
